@@ -19,9 +19,9 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { FaMoon, FaSun } from "react-icons/fa";
 
 export default function Gslr() {
-  const bg = useColorModeValue("white", "gray.800");
+  const bg = useColorModeValue("white", "gray.900");
   const mobileNav = useDisclosure();
-  const colorLogo = useColorModeValue("gray.800", "white")
+  const colorLogo = useColorModeValue("gray.900", "white")
 
   const { toggleColorMode: toggleMode } = useColorMode();
   const text = useColorModeValue("dark", "light");
@@ -36,7 +36,7 @@ export default function Gslr() {
         py={4}
         shadow="md"
       >
-        <Flex alignItems="center" justifyContent="space-between" mx="auto">
+        <Flex alignItems="center" justifyContent="space-between" ml="5">
           <Flex>
             <chakra.a
               href="/"
@@ -45,12 +45,12 @@ export default function Gslr() {
               alignItems="center"
             >
              <Image
-                  htmlHeight="35px"
-                  htmlWidth="35px"
+                  htmlHeight="30px"
+                  htmlWidth="30px"
                   src="logo-color.png"
                   alt="ideamarket.io"
                 />
-               <Heading as="h3" m={2} size="lg" color={colorLogo}>
+               <Heading as="h3" mx={2} size="lg" color={colorLogo}>
                 Ideamarket.io
                 </Heading>
             </chakra.a>
@@ -84,7 +84,7 @@ export default function Gslr() {
                 display={{ base: "flex", md: "none" }}
                 aria-label="Open menu"
                 fontSize="20px"
-                color={useColorModeValue("gray.800", "white")}
+                color={useColorModeValue("gray.900", "white")}
                 variant="ghost"
                 icon={<AiOutlineMenu />}
                 onClick={mobileNav.onOpen}
@@ -108,7 +108,7 @@ export default function Gslr() {
                 <CloseButton
                   aria-label="Close menu"
                   onClick={mobileNav.onClose}
-                  color={useColorModeValue("gray.800", "white")}
+                  color={useColorModeValue("gray.900", "white")}
 
                 />
 
@@ -139,6 +139,7 @@ export default function Gslr() {
                 variant="ghost"
                 color={colorLogo}
                 ml={{ base: "0", md: "3" }}
+                
                 onClick={toggleMode}
                 icon={<SwitchIcon />}
               />
