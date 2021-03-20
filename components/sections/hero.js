@@ -9,15 +9,18 @@ import {
   Text,
   Icon,
   Flex,
+  AspectRatio
 } from "@chakra-ui/react";
+import {FaPlus , FaPlayCircle} from "react-icons/fa";
 
 const CTA = () => {
+
   return (
     <Flex
       direction={{ base: "column", md: "row" }}
-      bg={useColorModeValue("brand.500")}
-      px={8}
-      py={24}
+      bg={useColorModeValue("gray.50","gray.700")}
+      px={10}
+      py={28}
       mx="auto"
     >
       <Box
@@ -30,26 +33,35 @@ const CTA = () => {
           fontWeight="extrabold"
           letterSpacing="tight"
           lineHeight="shorter"
-          color={useColorModeValue("white", "gray.100")}
+          color={useColorModeValue("gray.500", "gray.100")}
           textShadow="2px 0 currentcolor"
           mb={6}
         >
-          <chakra.span display="block">Ready to dive in?</chakra.span>
-          <chakra.span
+          <chakra.span display="block" color={useColorModeValue("brand.500", "brand.100")} >
+          Voice your trust
+          </chakra.span>
+          <Text
+            display={{ base: "block", lg: "inline" }}
+            w="full"
+            bgClip="text"
+            bgGradient={useColorModeValue("linear(to-r, brand.200,brand.500)", "linear(to-r, brand.200,brand.400)")}
+            fontWeight="extrabold"
+          >
+            Tune into what matters
+          </Text>
+          {/* <chakra.span
             display="block"
-            color={useColorModeValue("white", "gray.500")}
+            color={useColorModeValue("gray.700", "gray.100")}
           >
             Start your free trial today.
-          </chakra.span>
+          </chakra.span> */}
         </chakra.h2>
         <chakra.p
           mb={6}
           fontSize={{ base: "lg", md: "xl" }}
-          color={useColorModeValue("gray.100", "gray.300")}
+          color={useColorModeValue("gray.800", "gray.100")}
         >
-          Hellonext is a feature voting software where you can allow your users
-          to vote on features, publish roadmap, and complete your customer
-          feedback loop.
+          Vote with your dollars, and give underrated voices the visibility they deserve.
         </chakra.p>
         <Stack
           direction={{ base: "column", sm: "row" }}
@@ -68,13 +80,37 @@ const CTA = () => {
               fontWeight="bold"
               w="full"
               rounded="md"
-              color={useColorModeValue("white")}
-              bg={useColorModeValue("brand.600", "brand.500")}
+              color={useColorModeValue("white" , "gray.50")}
+              bg={useColorModeValue("brand.400", "brand.300")}
               _hover={{
-                bg: useColorModeValue("brand.700", "brand.600"),
+                bg: useColorModeValue("brand.300", "brand.400"),
               }}
             >
-              Sign up for free
+              {/* <FaPlus/> */}
+              &nbsp;
+               Trade Now 
+            </chakra.a>
+          </Box>
+          <Box display="inline-flex" rounded="md" shadow="md">
+            <chakra.a
+              href="#"
+              display="inline-flex"
+              alignItems="center"
+              justifyContent="center"
+              px={5}
+              py={3}
+              border="solid transparent"
+              fontWeight="bold"
+              w="full"
+              rounded="md"
+              color={useColorModeValue("white" , "white")}
+              bg={useColorModeValue("gray.700", "gray.500")}
+              _hover={{
+                bg: useColorModeValue("gray.600", "gray.400"),
+              }}
+            >
+              <FaPlayCircle/> &nbsp;
+              Watch Video
             </chakra.a>
           </Box>
         </Stack>
@@ -84,9 +120,11 @@ const CTA = () => {
           w="full"
           rounded="lg"
           shadow="2xl"
-          src="https://kutty.netlify.app/hero.jpg"
+          border="transparent"
+          src="im-mockup.png"
           alt="Hellonext feedback boards software screenshot"
         />
+      
       </Box>
     </Flex>
   );

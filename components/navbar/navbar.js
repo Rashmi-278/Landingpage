@@ -35,6 +35,11 @@ export default function Gslr() {
         px={{ base: 2, sm: 4 }}
         py={4}
         shadow="md"
+        borderTop="6px solid "
+        borderTopColor={useColorModeValue("brand.300", "brand.400")}
+        overflowY="hidden"
+        // borderBottomWidth={2}
+        // borderBottomColor={useColorModeValue("gray.200", "gray.900")}
       >
         <Flex alignItems="center" justifyContent="space-between" ml="5">
           <Flex>
@@ -115,7 +120,7 @@ export default function Gslr() {
                 <Button w="full" variant="ghost">Account</Button>
 
                 <Link href="https://docs.ideamarket.io/">
-                <Button w=""full variant="ghost">About</Button>
+                <Button w="full" variant="ghost">About</Button>
                 </Link>
                    
                 <Button w="full" variant="ghost">Newsletter</Button>

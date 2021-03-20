@@ -18,9 +18,9 @@ export default function Component() {
       focusable="false"
     >
       <linearGradient id="gradient" x2="1" y2="1">
-        <stop offset="0%" stop-color="#447799" />
-        <stop offset="50%" stop-color={red500} />
-        <stop offset="full" stop-color={brand600} />
+        <stop offset="0%" stopColor="#447799" />
+        <stop offset="50%" stopColor={red500} />
+        <stop offset="full" stopColor={brand600} />
       </linearGradient>
     </chakra.svg>
   );
