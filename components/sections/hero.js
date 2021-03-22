@@ -89,8 +89,7 @@ const CTA = () => {
                 bg: useColorModeValue("brand.300", "brand.400"),
               }}
             >
-              {/* <FaPlus/> */}
-              &nbsp;
+              
                Trade Now 
             </chakra.a>
           </Box>
