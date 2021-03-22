@@ -25,13 +25,7 @@ export default function Component() {
     { name: "Martin Madrazo", email: "martin.madrazo@mail.com" },
   ];
   return (
-    <Flex
-      w="full"
-      bg="gray.600"
-      p={50}
-      alignItems="center"
-      justifyContent="center"
-    >
+    
       <Stack
         direction={{ base: "column" }}
         w="full"
@@ -47,7 +41,7 @@ export default function Component() {
               {useBreakpointValue({ base: true, sm: pid === 0 }) && (
                 <SimpleGrid
                   spacingY={3}
-                  columns={{ base: 1, sm: 3 }}
+                  columns={{ base: 1, sm: 11 }}
                   w={{ base: 100, sm: "full" }}
                   textTransform="uppercase"
                   bg={useColorModeValue("gray.100", "gray.700")}
@@ -57,6 +51,15 @@ export default function Component() {
                   fontSize="sm"
                   fontWeight="hairline"
                 >
+                  <span>Name</span>
+                  <span>Email</span>
+                  <span>Actions</span>
+                  <span>Name</span>
+                  <span>Email</span>
+                  <span>Actions</span>
+                  <span>Name</span>
+                  <span>Email</span>
+                  <span>Actions</span>
                   <span>Name</span>
                   <span>Email</span>
                   <span>Actions</span>
@@ -70,15 +73,16 @@ export default function Component() {
                 px={10}
                 fontWeight="hairline"
               >
-                <span>{person.name}</span>
+                <span key="f2">{person.name}</span>
                 <chakra.span
                   textOverflow="ellipsis"
                   overflow="hidden"
                   whiteSpace="nowrap"
+                  key="f3"
                 >
                   {person.email}
                 </chakra.span>
-                <span>
+                <span key="action">
                   <Button variant="solid" colorScheme="red" size="sm">
                     Delete
                   </Button>
@@ -88,6 +92,5 @@ export default function Component() {
           );
         })}
       </Stack>
-    </Flex>
   );
 }
