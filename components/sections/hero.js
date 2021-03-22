@@ -12,7 +12,7 @@ import {
   AspectRatio
 } from "@chakra-ui/react";
 import {FaPlus , FaPlayCircle} from "react-icons/fa";
-
+import Success from "../alerts/success"
 const CTA = () => {
 
   return (
@@ -60,8 +60,11 @@ const CTA = () => {
           mb={6}
           fontSize={{ base: "lg", md: "xl" }}
           color={useColorModeValue("gray.800", "gray.100")}
+          fontWeight="bold"
         >
           Vote with your dollars, and give underrated voices the visibility they deserve.
+          Hellonext is a feature voting software where you can allow your users to vote on features, publish roadmap, 
+          and complete your customer feedback loop.
         </chakra.p>
         <Stack
           direction={{ base: "column", sm: "row" }}
@@ -120,8 +123,8 @@ const CTA = () => {
           w="full"
           rounded="lg"
           shadow="2xl"
-          border="transparent"
-          src="im-mockup.png"
+          border=" none"
+          src="im-prod-1.png"
           alt="Hellonext feedback boards software screenshot"
         />
       
