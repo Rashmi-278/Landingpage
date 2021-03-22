@@ -31,7 +31,7 @@ const CTA = () => {
         <chakra.h2
           fontSize={{ base: "3xl", sm: "4xl" }}
           fontWeight="extrabold"
-          letterSpacing="tight"
+          letterSpacing="normal"
           lineHeight="shorter"
           color={useColorModeValue("gray.500", "gray.100")}
           textShadow="2px 0 currentcolor"
@@ -79,6 +79,7 @@ const CTA = () => {
               justifyContent="center"
               px={5}
               py={3}
+              
               border="solid transparent"
               fontWeight="bold"
               w="full"
@@ -101,6 +102,7 @@ const CTA = () => {
               justifyContent="center"
               px={5}
               py={3}
+              
               border="solid transparent"
               fontWeight="bold"
               w="full"
