@@ -60,7 +60,7 @@ const CTA = () => {
           mb={6}
           fontSize={{ base: "lg", md: "xl" }}
           color={useColorModeValue("gray.800", "gray.100")}
-          fontWeight="bold"
+          fontWeight="light"
         >
           Vote with your dollars, and give underrated voices the visibility they deserve.
           Hellonext is a feature voting software where you can allow your users to vote on features, publish roadmap, 
