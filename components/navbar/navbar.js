@@ -72,6 +72,9 @@ export default function Gslr() {
                 <Link href="https://docs.ideamarket.io/">
                 <Button variant="ghost">About</Button>
                 </Link>
+                <Link href="/faq">
+                <Button variant="ghost">FAQ</Button>
+                </Link>
                 <Button variant="ghost">Newsletter</Button>
                 <Link href="https://discord.com/invite/zaXZXGE4Ke">
                 <Button variant="ghost">Community</Button>

@@ -9,7 +9,9 @@ import {
   Text,
   Icon,
   Flex,
-  AspectRatio
+  AspectRatio,
+  HStack,
+  VStack
 } from "@chakra-ui/react";
 import {FaPlus , FaPlayCircle} from "react-icons/fa";
 import Success from "../alerts/success"
@@ -20,13 +22,14 @@ const CTA = () => {
       direction={{ base: "column", md: "row" }}
       bg={useColorModeValue("gray.50","gray.700")}
       px={10}
-      py={28}
+      py={20}
       mx="auto"
     >
       <Box
         w={{ base: "full", md: 11 / 12, xl: 9 / 12 }}
         mx="auto"
         pr={{ md: 20 }}
+        mb="20px"
       >
         <chakra.h2
           fontSize={{ base: "3xl", sm: "4xl" }}
@@ -49,12 +52,15 @@ const CTA = () => {
           >
             Tune into what matters
           </Text>
-          {/* <chakra.span
+          <chakra.span
+            py="5"
             display="block"
-            color={useColorModeValue("gray.700", "gray.100")}
+            fontSize="2xl"
+            
+            color={useColorModeValue("brand.700", "brand.200")}
           >
-            Start your free trial today.
-          </chakra.span> */}
+            $1,019,538 in trust signaled
+        </chakra.span>
         </chakra.h2>
         <chakra.p
           mb={6}
@@ -116,16 +122,51 @@ const CTA = () => {
               <FaPlayCircle/> &nbsp;
               Watch Video
             </chakra.a>
+       
           </Box>
+          
         </Stack>
+
+    
+      <HStack
+      background="gray.900"
+      rounded="9px"
+      alignItems="center"
+      justifyContent="center"
+px="8px"
+      >
+        
+        <Image
+         width={40}
+         my={4}
+         src="ethereum.png"
+         alt="Hellonext feedback boards software screenshot"
+       />
+       <VStack >
+       <chakra.p mb={-3} color={useColorModeValue( "gray.200" , "gray.300")}>
+         audited by
+        </chakra.p>
+       <Image pl={4}
+        width={40}
+        height={8}
+        src="qs.png"
+
+        alt="Hellonext feedback boards software screenshot"
+        />
+       </VStack>
+       
+      </HStack>
+      
+        
+        
       </Box>
-      <Box w={{ base: "full", md: 10 / 12 }} mx="auto" textAlign="center">
+      <Box w={{ base: "full", md: 11 / 12 }} mx="auto" textAlign="center" >
         <Image
           w="full"
           rounded="lg"
           shadow="2xl"
           border=" none"
-          src="im-prod-1.png"
+          src="fulltc.png"
           alt="Hellonext feedback boards software screenshot"
         />
       
