@@ -1,10 +1,11 @@
 import '../styles/globals.css'
-
+import {useState} from "react"
 import { ChakraProvider, ColorModeProvider } from '@chakra-ui/react'
 
 import theme from '../components/theme/theme'
 
 function MyApp({ Component, pageProps }) {
+
   return (
     <ChakraProvider resetCSS theme={theme}>
       <ColorModeProvider
