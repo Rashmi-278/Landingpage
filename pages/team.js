@@ -6,30 +6,33 @@ import {
   Flex,
   useColorModeValue,
   Link,
+  SimpleGrid,
+  Button,
+  Grid
 } from "@chakra-ui/react";
 
 const Ma = () => {
   return (
-    <Flex
-      bg="gray.600"
-      p={50}
-      w="full"
-      alignItems="center"
-      justifyContent="center"
-    >
-      <Box
+    
+
+<Flex direction={{base:"column" , lg:"row"}}  justify="center" >
+
+
+<Box
         w="xs"
         bg={useColorModeValue("white", "gray.800")}
         shadow="lg"
         rounded="lg"
         overflow="hidden"
-        m={4}
+        m="5"
+        alignSelf="center"
+
       >
         <Image
           w="full"
           h={56}
           fit="cover"
-          src="https://images.unsplash.com/photo-1542156822-6924d1a71ace?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+          src="mike.jpg"
           alt="avatar"
         />
 
@@ -41,28 +44,32 @@ const Ma = () => {
             color={useColorModeValue("gray.800", "white")}
             fontWeight="bold"
           >
-            John Doe
+            Mike Elias
           </Link>
           <chakra.span
             fontSize="sm"
             color={useColorModeValue("gray.700", "gray.200")}
           >
-            Software Engineer
+            Founder and CEOO
           </chakra.span>
         </Box>
       </Box>
+
+
       <Box
         w="xs"
         bg={useColorModeValue("white", "gray.800")}
         shadow="lg"
         rounded="lg"
         overflow="hidden"
+        m="5"
+        alignSelf="center"
       >
         <Image
           w="full"
           h={56}
           fit="cover"
-          src="https://images.unsplash.com/photo-1542156822-6924d1a71ace?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+          src="alex.jpg"
           alt="avatar"
         />
 
@@ -74,17 +81,19 @@ const Ma = () => {
             color={useColorModeValue("gray.800", "white")}
             fontWeight="bold"
           >
-            John Doe
+            Alexander Schlindwein
           </Link>
           <chakra.span
             fontSize="sm"
             color={useColorModeValue("gray.700", "gray.200")}
           >
-            Software Engineer
+            CTO and Cheif Architect
           </chakra.span>
         </Box>
       </Box>
-    </Flex>
+
+</Flex>
+
   );
 };
 

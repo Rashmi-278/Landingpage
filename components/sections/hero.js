@@ -15,22 +15,37 @@ import {
 } from "@chakra-ui/react";
 import {FaPlus , FaPlayCircle} from "react-icons/fa";
 import Success from "../alerts/success"
+
+import { motion } from "framer-motion";
+
 const CTA = () => {
+
+  const config = {
+    type: "spring",
+    damping: 20,
+    stiffness: 100
+  };
 
   return (
     <Flex
       direction={{ base: "column", md: "row" }}
-      bg={useColorModeValue("gray.50","gray.700")}
+      bg={useColorModeValue("gray.50","gray.900")}
       px={10}
       py={20}
       mx="auto"
     >
+      
       <Box
         w={{ base: "full", md: 11 / 12, xl: 9 / 12 }}
         mx="auto"
         pr={{ md: 20 }}
         mb="20px"
-      >
+      > <motion.h1
+      transition={config}
+      initial={{ scale: 0, opacity: 0 }}
+      animate={{ scale: 1, opacity: 1 }}
+      exit={{ x: 0, opacity: 0 }}
+    >
         <chakra.h2
           fontSize={{ base: "3xl", sm: "4xl" }}
           fontWeight="extrabold"
@@ -52,15 +67,7 @@ const CTA = () => {
           >
             Tune into what matters
           </Text>
-          <chakra.span
-            py="5"
-            display="block"
-            fontSize="2xl"
-            
-            color={useColorModeValue("brand.700", "brand.200")}
-          >
-            $1,019,538 in trust signaled
-        </chakra.span>
+        
         </chakra.h2>
         <chakra.p
           mb={6}
@@ -72,6 +79,7 @@ const CTA = () => {
           Hellonext is a feature voting software where you can allow your users to vote on features, publish roadmap, 
           and complete your customer feedback loop.
         </chakra.p>
+        </motion.h1>
         <Stack
           direction={{ base: "column", sm: "row" }}
           mb={{ base: 4, md: 8 }}
@@ -100,6 +108,8 @@ const CTA = () => {
                Trade Now 
             </chakra.a>
           </Box>
+          
+
           <Box display="inline-flex" rounded="md" shadow="md">
             <chakra.a
               href="#"
@@ -131,19 +141,20 @@ const CTA = () => {
       <HStack
       background="gray.900"
       rounded="9px"
-      alignItems="center"
-      justifyContent="center"
-px="8px"
+      alignItems={useColorModeValue("center", "start" )}
+      justifyContent={useColorModeValue("center", "start" )}
+      px="8px"
+      py="8px"
       >
         
         <Image
          width={40}
-         my={4}
+         my={2}
          src="ethereum.png"
-         alt="Hellonext feedback boards software screenshot"
+         alt="ethereum"
        />
        <VStack >
-       <chakra.p mb={-3} color={useColorModeValue( "gray.200" , "gray.300")}>
+       <chakra.p mb={-2} color={useColorModeValue("gray.200" , "gray.300")}>
          audited by
         </chakra.p>
        <Image pl={4}
@@ -151,7 +162,7 @@ px="8px"
         height={8}
         src="qs.png"
 
-        alt="Hellonext feedback boards software screenshot"
+        alt="quantstamp"
         />
        </VStack>
        
