@@ -178,7 +178,7 @@ const CTA = () => {
           shadow="2xl"
           border=" none"
           src="fulltc.png"
-          alt="Hellonext feedback boards software screenshot"
+          alt="Image"
         />
       
       </Box>
