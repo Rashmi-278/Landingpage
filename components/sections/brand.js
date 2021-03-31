@@ -51,7 +51,7 @@ export default function Component() {
 <Flex justifyContent="center" bg={useColorModeValue("gray.100","gray.900")}>
   <Pop>
     <chakra.h2
-          fontSize={{ base: "2xl", sm: "4xl" }}
+          fontSize={{ base: "xl", sm: "4xl" }}
           fontWeight="extrabold"
           letterSpacing="normal"
           lineHeight="shorter"
