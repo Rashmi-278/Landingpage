@@ -23,7 +23,7 @@ export default function Component() {
 
     <Image
     
-    width="26"
+    width="24"
     height="24px"
       
       src="coindesk.png"
@@ -31,14 +31,14 @@ export default function Component() {
   />
 
       <Image pl={2}
-      width={{sm:"26" , lg:"30"}}
+      width={{sm:"24" , lg:"30"}}
       height="24px"
       src="nasdaq.png"
       alt="nasdaq"
       />
 
        <Image pl={2}
-       width={{sm:"26" , lg:"30"}}
+       width={{sm:"24" , lg:"30"}}
        height="24px"
        
       src="vice.png"

@@ -76,12 +76,9 @@ const Hero = () => {
           spacing={2}
         >
           <Box display="inline-flex" rounded="md" shadow="md">
-        <motion.button
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.8 }}
-        >
+        
               <chakra.a
-              href="#"
+              href="https://app.ideamarket.io/"
               display="inline-flex"
               alignItems="center"
               justifyContent="center"
@@ -101,7 +98,6 @@ const Hero = () => {
               <MdLaunch/> &nbsp;
                Launch App 
             </chakra.a>
-            </motion.button>
           </Box>
           
 
