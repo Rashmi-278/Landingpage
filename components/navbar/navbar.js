@@ -69,16 +69,20 @@ export default function Gslr() {
               display={{ base: "none", md: "inline-flex" }}
             >
                 <Button variant="ghost">Account</Button>
-                <Link href="https://docs.ideamarket.io/">
+                <a target="_blank" href="https://docs.ideamarket.io/" rel="noopener noreferrer">
                 <Button variant="ghost">About</Button>
-                </Link>
-                <Link href="https://docs.ideamarket.io/faq/faq-prediction-market">
-                <Button variant="ghost">FAQ</Button>
-                </Link>
-                {/* <Button variant="ghost">Newsletter</Button> */}
-                <Link href="https://discord.com/invite/zaXZXGE4Ke">
+                </a>
+
+
+                <a target="_blank" href="https://docs.ideamarket.io/faq/faq-prediction-market" rel="noopener noreferrer">
+                 <Button variant="ghost">FAQ</Button>
+                </a>
+
+                
+                <a target="_blank" href="https://discord.com/invite/zaXZXGE4Ke" rel="noopener noreferrer">
                 <Button variant="ghost">Community</Button>
-                </Link>
+                </a>
+
                 <Button variant="solid"  
                 color={useColorModeValue("blue.500", "blue.100")}>
                 Connect Wallet
@@ -122,17 +126,21 @@ export default function Gslr() {
 
                 <Button w="full" variant="ghost">Account</Button>
 
-                <Link href="https://docs.ideamarket.io/">
+                <a target="_blank" href="https://docs.ideamarket.io/" rel="noopener noreferrer">
                 <Button w="full" variant="ghost">About</Button>
-                </Link>
-                   
-                <Button w="full" variant="ghost">Newsletter</Button>
+                </a>
+
+
+                <a target="_blank" href="https://docs.ideamarket.io/faq/faq-prediction-market" rel="noopener noreferrer">
+                 <Button w="full" variant="ghost">FAQ</Button>
+                </a>
+
                 
-                <Link href="https://discord.com/invite/zaXZXGE4Ke">
+                <a target="_blank" href="https://discord.com/invite/zaXZXGE4Ke" rel="noopener noreferrer">
                 <Button w="full" variant="ghost">Community</Button>
-                </Link>
-                
-                <Button w="full" variant="solid"  
+                </a>
+
+                <Button variant="solid"  w="full"
                 color={useColorModeValue("blue.500", "blue.100")}>
                 Connect Wallet
                 </Button>
