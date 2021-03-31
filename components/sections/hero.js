@@ -16,14 +16,13 @@ import {
 import {FaPlus , FaPlayCircle} from "react-icons/fa";
 import Success from "../alerts/success"
 
-import { motion } from "framer-motion";
+import { motion  , Frame  , ScrollMotionValues} from "framer-motion";
 
 const CTA = () => {
 
   const config = {
-    type: "spring",
-    damping: 20,
-    stiffness: 100
+    ease: [0.17, 0.67, 0.83, 0.67]
+    
   };
 
   return (
@@ -41,11 +40,14 @@ const CTA = () => {
         pr={{ md: 20 }}
         mb="20px"
       > <motion.h1
-      transition={config}
-      initial={{ scale: 0, opacity: 0 }}
-      animate={{ scale: 1, opacity: 1 }}
-      exit={{ x: 0, opacity: 0 }}
-    >
+      initial={{x: +1000}}
+      animate={{x: [+500, +50, +20, +10 , 0] }} 
+      transition={{
+        type: "tween",
+        duration: "2",
+        delay: "2"
+    }}>
+      
         <chakra.h2
           fontSize={{ base: "3xl", sm: "4xl" }}
           fontWeight="extrabold"

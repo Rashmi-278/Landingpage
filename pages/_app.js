@@ -1,4 +1,6 @@
 import '../styles/globals.css'
+
+
 import {useState} from "react"
 import { ChakraProvider, ColorModeProvider } from '@chakra-ui/react'
 import CookieConsent, { Cookies } from "react-cookie-consent";

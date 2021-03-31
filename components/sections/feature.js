@@ -10,6 +10,8 @@ import {
   useColorModeValue,
   Image
 } from "@chakra-ui/react";
+
+import {motion , Scroll , Frame } from "framer-motion"
 export default function Asm() {
   return (
     <>
@@ -20,7 +22,7 @@ export default function Asm() {
       justifyContent="center"
       alignItems="center"
       
-    >
+    > 
       <Box
         shadow="xl"
         bg={useColorModeValue("white", "gray.800")}
@@ -57,6 +59,10 @@ export default function Asm() {
               To help achieve this, Ideamarket offers creators a new income stream based on attention-worthiness, without dependence on ads or paywalls.
             </chakra.p>
           </Box>
+
+          <motion.div
+          initial={{x: -1000}}
+          animate={{x: [-500, -50, -20, -10 , 0] }}>
         <SimpleGrid
           alignItems="start"
           columns={{ base: 1, md: 2 }}
@@ -103,6 +109,18 @@ export default function Asm() {
             </Image>
           </Box>
         </SimpleGrid>
+        </motion.div>
+
+        <motion.div
+      initial={{x: +1000}}
+      animate={{x: [+500, +50, +20, +10 , 0] }}
+      transition={{
+        type: "tween",
+        duration: "2",
+        delay: "1"
+    }}
+      
+      >
         <SimpleGrid
           alignItems="center"
           columns={{ base: 1, md: 2 }}
@@ -149,6 +167,12 @@ export default function Asm() {
             </Image>
           </Box>
         </SimpleGrid>
+        </motion.div>
+
+        <motion.div
+          initial={{x: -1000}}
+          animate={{x: [-500, -50, -20, -10 , 0] }}>
+
         <SimpleGrid
           alignItems="start"
           columns={{ base: 1, md: 2 }}
@@ -195,6 +219,7 @@ export default function Asm() {
             </Image>
           </Box>
         </SimpleGrid>
+        </motion.div>
       </Box>
       
     </Flex>
