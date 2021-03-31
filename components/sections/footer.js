@@ -11,6 +11,7 @@ import {
   useToken,
 } from "@chakra-ui/react";
 import { FaDiscord , FaTwitterSquare , FaGithub } from "react-icons/fa";
+import { motion } from "framer-motion"
 
 export default function Component() {
 return (
@@ -20,16 +21,36 @@ return (
      p={50}
      > 
   <HStack>
-  <a target="_blank" href="https://discord.com/invite/zaXZXGE4Ke" rel="noopener noreferrer" p={3}>
-    <FaDiscord size={50}/>
-  </a>
+ 
+        <a target="_blank" href="https://discord.com/invite/zaXZXGE4Ke" rel="noopener noreferrer" >
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+        >
+          <FaDiscord size={50}/>
+          </motion.button>
 
-  <a target="_blank"  href="https://twitter.com/ideamarkets_" rel="noopener noreferrer">
-    <FaTwitterSquare size={50} />
-  </a>
-  <a target="_blank" href="https://github.com/Ideamarket" rel="noopener noreferrer">
-    <FaGithub size={50} />
-  </a>
+        </a>
+
+        <a target="_blank"  href="https://twitter.com/ideamarkets_" rel="noopener noreferrer">
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+        >
+          <FaTwitterSquare size={50} />
+          </motion.button>
+        </a>
+
+
+        <a target="_blank" href="https://github.com/Ideamarket" rel="noopener noreferrer">
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+        >
+          <FaGithub size={50} />
+          </motion.button>
+        </a>
+        
   </HStack>
   
   <HStack>

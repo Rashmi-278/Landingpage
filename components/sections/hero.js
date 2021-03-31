@@ -14,16 +14,12 @@ import {
   VStack
 } from "@chakra-ui/react";
 import {FaPlus , FaPlayCircle} from "react-icons/fa";
-import Success from "../alerts/success"
+import {MdLaunch} from "react-icons/md";
 
-import { motion  , Frame  , ScrollMotionValues} from "framer-motion";
 
-const CTA = () => {
+import { motion } from "framer-motion";
 
-  const config = {
-    ease: [0.17, 0.67, 0.83, 0.67]
-    
-  };
+const Hero = () => {
 
   return (
     <Flex
@@ -39,14 +35,7 @@ const CTA = () => {
         mx="auto"
         pr={{ md: 20 }}
         mb="20px"
-      > <motion.h1
-      initial={{x: +1000}}
-      animate={{x: [+500, +50, +20, +10 , 0] }} 
-      transition={{
-        type: "tween",
-        duration: "2",
-        delay: "2"
-    }}>
+      > 
       
         <chakra.h2
           fontSize={{ base: "3xl", sm: "4xl" }}
@@ -81,14 +70,17 @@ const CTA = () => {
           Hellonext is a feature voting software where you can allow your users to vote on features, publish roadmap, 
           and complete your customer feedback loop.
         </chakra.p>
-        </motion.h1>
         <Stack
           direction={{ base: "column", sm: "row" }}
           mb={{ base: 4, md: 8 }}
           spacing={2}
         >
           <Box display="inline-flex" rounded="md" shadow="md">
-            <chakra.a
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.8 }}
+        >
+              <chakra.a
               href="#"
               display="inline-flex"
               alignItems="center"
@@ -106,9 +98,10 @@ const CTA = () => {
                 bg: useColorModeValue("brand.300", "brand.400"),
               }}
             >
-              
-               Trade Now 
+              <MdLaunch/> &nbsp;
+               Launch App 
             </chakra.a>
+            </motion.button>
           </Box>
           
 
@@ -188,4 +181,4 @@ const CTA = () => {
   );
 };
 
-export default CTA;
+export default Hero;

@@ -12,15 +12,15 @@ import {
   useColorModeValue,
   useToken,
 } from "@chakra-ui/react";
+import Pop from "../animations/pop.js"
 
 
 export default function Component() {
   
   return (
     <>
-    
-    <Flex p={45} justifyContent="center"   bg={useColorModeValue("gray.100","gray.900")}
->
+    <Flex p={45} justifyContent="center"   bg={useColorModeValue("gray.100","gray.900")}>
+
     <Image
     
     width="26"
@@ -49,6 +49,7 @@ export default function Component() {
 
     </Flex>
 <Flex justifyContent="center" bg={useColorModeValue("gray.100","gray.900")}>
+  <Pop>
     <chakra.h2
           fontSize={{ base: "2xl", sm: "4xl" }}
           fontWeight="extrabold"
@@ -64,13 +65,13 @@ export default function Component() {
           </chakra.span>
           
         </chakra.h2>
+        </Pop>   
 
         </Flex>
 
     
       
-  
-    </>
+         </>
 
   );
 }

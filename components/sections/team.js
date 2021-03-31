@@ -16,6 +16,19 @@ const Ma = () => {
     
 
 <Flex direction={{base:"column" , lg:"row"}}  justify="center" >
+<Box textAlign={{ lg: "center" }} mb={20}>
+           
+            <chakra.p
+              mt={2}
+              fontSize={{ base: "3xl", sm: "4xl" }}
+              lineHeight="8"
+              fontWeight="extrabold"
+              letterSpacing="tight"
+              color={useColorModeValue("gray.900" , "gray.200")}
+            >
+Our Team            </chakra.p>
+           
+          </Box>
 
 
 <Box

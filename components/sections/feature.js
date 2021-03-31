@@ -11,8 +11,12 @@ import {
   Image
 } from "@chakra-ui/react";
 
-import {motion , Scroll , Frame } from "framer-motion"
-export default function Asm() {
+
+import SlideLeft from "../animations/slideLeft.js"
+import SlideRight from "../animations/slideRight.js"
+
+
+export default function Feature() {
   return (
     <>
     <Flex
@@ -24,7 +28,6 @@ export default function Asm() {
       
     > 
       <Box
-        shadow="xl"
         bg={useColorModeValue("white", "gray.800")}
         px={{ base:"10" , lg:"20"}}
         py={20}
@@ -60,9 +63,8 @@ export default function Asm() {
             </chakra.p>
           </Box>
 
-          <motion.div
-          initial={{x: -1000}}
-          animate={{x: [-500, -50, -20, -10 , 0] }}>
+          
+        <SlideLeft>
         <SimpleGrid
           alignItems="start"
           columns={{ base: 1, md: 2 }}
@@ -99,7 +101,9 @@ export default function Asm() {
               _hover={{ bg: useColorModeValue("gray.700", "gray.600") }}
               color={useColorModeValue("gray.100", "gray.200")}
               as="a"
-              href="#"
+              target="_blank"
+
+              href="https://docs.ideamarket.io/user-guide/overview-2-1-minute-read"
             >
               Learn More
             </Button>
@@ -109,18 +113,10 @@ export default function Asm() {
             </Image>
           </Box>
         </SimpleGrid>
-        </motion.div>
+        </SlideLeft>
 
-        <motion.div
-      initial={{x: +1000}}
-      animate={{x: [+500, +50, +20, +10 , 0] }}
-      transition={{
-        type: "tween",
-        duration: "2",
-        delay: "1"
-    }}
       
-      >
+        <SlideRight>
         <SimpleGrid
           alignItems="center"
           columns={{ base: 1, md: 2 }}
@@ -157,7 +153,9 @@ export default function Asm() {
               _hover={{ bg: useColorModeValue("gray.700", "gray.600") }}
               color={useColorModeValue("gray.100", "gray.200")}
               as="a"
-              href="#"
+              target="_blank"
+
+              href="https://docs.ideamarket.io/user-guide/hiw-buy-and-sell"
             >
               Learn More
             </Button>
@@ -167,11 +165,9 @@ export default function Asm() {
             </Image>
           </Box>
         </SimpleGrid>
-        </motion.div>
+        </SlideRight>
 
-        <motion.div
-          initial={{x: -1000}}
-          animate={{x: [-500, -50, -20, -10 , 0] }}>
+       <SlideLeft>
 
         <SimpleGrid
           alignItems="start"
@@ -209,7 +205,8 @@ export default function Asm() {
               _hover={{ bg: useColorModeValue("gray.700", "gray.600") }}
               color={useColorModeValue("gray.100", "gray.200")}
               as="a"
-              href="#"
+              href="https://docs.ideamarket.io/user-guide/hiw-add-new-listings"
+              target="_blank"
             >
               Learn More
             </Button>
@@ -219,8 +216,7 @@ export default function Asm() {
             </Image>
           </Box>
         </SimpleGrid>
-        </motion.div>
-      </Box>
+        </SlideLeft>      </Box>
       
     </Flex>
     </>

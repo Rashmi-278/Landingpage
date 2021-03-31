@@ -13,9 +13,9 @@ import {
   Icon,
 } from "@chakra-ui/react";
 
-const KuttyHero = () => {
+const News = () => {
   const Feature = (props) => (
-    <Flex alignItems="center" color={useColorModeValue("gray.900", "gray.300")}>
+    <Flex alignItems="center" color={useColorModeValue(null, "white")}>
       <Icon
         boxSize={4}
         mr={1}
@@ -33,8 +33,7 @@ const KuttyHero = () => {
     </Flex>
   );
   return (
-    <Box px={4} py={32} mx="auto"   bg={useColorModeValue("gray.50","gray.800")}
-    >
+    <Box px={4} py={32} mx="auto">
       <Box
         w={{ base: "full", md: 11 / 12, xl: 8 / 12 }}
         textAlign={{ base: "left", md: "center" }}
@@ -44,15 +43,15 @@ const KuttyHero = () => {
           mb={3}
           fontSize={{ base: "4xl", md: "5xl" }}
           fontWeight={{ base: "bold", md: "extrabold" }}
-          color={useColorModeValue("gray.900", "gray.300")}
+          color={useColorModeValue("gray.900", "gray.100")}
           lineHeight="shorter"
         >
-          Stay informed and pay attention to what matters.
+          A secure, faster way to transfer.
         </chakra.h1>
         <chakra.p
           mb={6}
           fontSize={{ base: "lg", md: "xl" }}
-          color={useColorModeValue("gray.900", "gray.300")}
+          color="gray.500"
           lineHeight="base"
         >
           We’re on a mission to bring transparency to finance. We charge as
@@ -75,9 +74,7 @@ const KuttyHero = () => {
               size="lg"
               type="email"
               placeholder="Enter your email..."
-              required={true}
-              color={useColorModeValue("gray.900", "gray.100")}
-
+              required="true"
             />
           </GridItem>
           <Button
@@ -99,16 +96,17 @@ const KuttyHero = () => {
           mb={3}
           spacing={{ base: 2, md: 8 }}
           fontSize="xs"
-          color={useColorModeValue("gray.900", "gray.100")}
-
+          color="gray.600"
         >
-          <Feature>No credit card required</Feature>
-          <Feature>14 days free</Feature>
-          <Feature>Cancel anytime</Feature>
+          <Feature>New listings notified</Feature>
+          <Feature>Get trending accounts</Feature>
+          <Feature>No spam</Feature>
         </Stack>
       </Box>
     </Box>
   );
 };
 
-export default KuttyHero;
+
+
+export default News;

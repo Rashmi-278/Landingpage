@@ -13,9 +13,9 @@ import {
   Icon,
 } from "@chakra-ui/react";
 
-const KuttyHero = () => {
+const Newsletter = () => {
   const Feature = (props) => (
-    <Flex alignItems="center" color={useColorModeValue(null, "white")}>
+    <Flex alignItems="center" color={useColorModeValue("gray.900", "gray.300")}>
       <Icon
         boxSize={4}
         mr={1}
@@ -33,7 +33,8 @@ const KuttyHero = () => {
     </Flex>
   );
   return (
-    <Box px={4} py={32} mx="auto">
+    <Box px={4} py={32} mx="auto"   bg={useColorModeValue("gray.50","gray.800")}
+    >
       <Box
         w={{ base: "full", md: 11 / 12, xl: 8 / 12 }}
         textAlign={{ base: "left", md: "center" }}
@@ -43,20 +44,20 @@ const KuttyHero = () => {
           mb={3}
           fontSize={{ base: "4xl", md: "5xl" }}
           fontWeight={{ base: "bold", md: "extrabold" }}
-          color={useColorModeValue("gray.900", "gray.100")}
+          color={useColorModeValue("gray.900", "gray.300")}
           lineHeight="shorter"
         >
-          A secure, faster way to transfer.
+          Stay informed and pay attention to what matters.
         </chakra.h1>
         <chakra.p
           mb={6}
           fontSize={{ base: "lg", md: "xl" }}
-          color="gray.500"
+          color={useColorModeValue("gray.900", "gray.300")}
           lineHeight="base"
         >
-          We’re on a mission to bring transparency to finance. We charge as
-          little as possible, and we always show you upfront. No hidden fees. No
-          bad exchange rates. No surprises.
+          We’re on a mission to bring credebility without corporations. Subscribe to our newsletter to stay updated. 
+          {/* little as possible, and we always show you upfront. No hidden fees. No
+          bad exchange rates. No surprises. */}
         </chakra.p>
         <SimpleGrid
           as="form"
@@ -74,7 +75,9 @@ const KuttyHero = () => {
               size="lg"
               type="email"
               placeholder="Enter your email..."
-              required="true"
+              required={true}
+              color={useColorModeValue("gray.900", "gray.100")}
+
             />
           </GridItem>
           <Button
@@ -96,17 +99,16 @@ const KuttyHero = () => {
           mb={3}
           spacing={{ base: 2, md: 8 }}
           fontSize="xs"
-          color="gray.600"
+          color={useColorModeValue("gray.900", "gray.100")}
+
         >
           <Feature>New listings notified</Feature>
           <Feature>Get trending accounts</Feature>
-          <Feature>No spam</Feature>
+          <Feature>Cancel anytime</Feature>
         </Stack>
       </Box>
     </Box>
   );
 };
 
-
-
-export default KuttyHero;
+export default Newsletter;
