@@ -1,5 +1,9 @@
 # Ideamarket.io Landing Page GR9 hackathon project
 
+#### This project wona bounty for its submission in GR9 Hacakthon
+![image](https://user-images.githubusercontent.com/41290852/224822396-a93de94c-c0b7-4693-aee1-041dfbc224ad.png)
+
+-----
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
